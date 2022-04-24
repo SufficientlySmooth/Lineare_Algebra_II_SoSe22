@@ -1,0 +1,38 @@
+\documentclass[11pt]{book}
+\usepackage{LectureNotesStyle}
+
+\makeindex
+\begin{document}
+  \frontmatter
+  \begin{titlepage}
+\centering
+	{\scshape\LARGE Ludwig-Maximilians-Universität \linebreak München \par}
+	\vspace{1cm}
+	
+	{\huge\bfseries \par Lineare Algebra II \linebreak bei Prof. Dr. Konstantinos Panagiotou \par}
+	\vspace{2cm}
+	{\scshape\Large Vorlesungsmitschrieb im SoSe 2022\par}
+	\vspace{1.5cm}
+	{\Large\itshape von Jan-Philipp Christ \par}
+	\vspace{4cm}
+	\begin{center}
+    \includegraphics[width=2in]{siegel}
+  \end{center}
+	{\large München, den \today \par}
+\end{titlepage}
+{\let\cleardoublepage\relax \frontmatter}
+
+  \tableofcontents
+  \markboth{Inhaltsverzeichnis}{Inhaltsverzeichnis}
+
+  \mainmatter\setcounter{page}{1}
+\include{Thema01}
+% add more topics here
+
+  \backmatter
+\renewcommand{\indexname}{Stichwortverzeichnis}
+\addcontentsline{toc}{section}{Stichwortverzeichnis}
+\printindex
+
+
+\end{document}

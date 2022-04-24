@@ -1,0 +1,65 @@
+\usepackage{a4wide}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[bookmarks]{hyperref}
+
+\usepackage{makeidx} %for Index
+\usepackage{lipsum} %for random text
+
+\usepackage{amsmath} 
+
+\usepackage{amssymb} %eg for fancy R (real numbers) symbol
+\usepackage{mathtools} %for \DeclarePairedDelimiter
+\usepackage{colonequals } % for :\iff
+\usepackage{bbm} % for unit matrix
+\usepackage{ stmaryrd }%for lightning
+\usepackage{accents}
+
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}  
+\newcommand{\thisindex}[1]{#1\index{#1}}
+
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\F}{{\mathbb F}}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\K}{{\mathbb K}}
+\newcommand{\Grqq}{\grqq\ }
+\newcommand{\Glqq}{\glqq}
+\newcommand{\mbeq}{\overset{!}{=}}
+\newcommand{\undereq}[1]{\underset{\substack{#1}}{=}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definition der Kopfzeile %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]%
+         {\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]%
+         {\markright{\thesection\ #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+    {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+    {\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+
+%% all classes are derived from Satz for continous numbering across Satz, Korollar etc.
+\newtheorem{Satz}{Satz}[chapter]
+\newtheorem{Korollar}[Satz]{Korollar}
+\newtheorem{Lemma}[Satz]{Lemma}
+\newtheorem{Beispiel}[Satz]{Beispiel}
+\newtheorem{Definition}[Satz]{Beispiel}
+
+\newcommand{\Vorlesung}[2]{\marginpar{\bfseries{VL #1 am #2}}}
+
+\makeatletter
+\renewcommand{\@chapapp}{Thema}
+\makeatother
